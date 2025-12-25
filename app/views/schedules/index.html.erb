@@ -1,0 +1,44 @@
+<div class="page-header">
+  <h1 class="page-title">予定一覧</h1>
+
+  <%= link_to new_schedule_path, class: "btn-add" do %>
+    <span class="btn-add-icon">＋</span>
+    新規追加
+  <% end %>
+</div>
+
+<div class="table-card">
+  <table class="schedule-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>タイトル</th>
+        <th>開始日</th>
+        <th>終了日</th>
+        <th>終日</th>
+        <th>更新日時</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @schedules.each do |schedule| %>
+        <tr>
+          <td><%= schedule.id %></td>
+          <td><%= schedule.title %></td>
+          <td><%= schedule.start_date %></td>
+          <td><%= schedule.end_date %></td>
+          <td><%= schedule.all_day ? "○" : "" %></td>
+          <td><%= l(schedule.updated_at, format: "%Y/%m/%d %H:%M") %></td>
+          <td class="actions">
+            <%= link_to "詳細", schedule_path(schedule) %>
+            <%= link_to "編集", edit_schedule_path(schedule) %>
+            <%= link_to "削除",
+                  schedule_path(schedule),
+                  data: { turbo_method: :delete, turbo_confirm: "本当に削除しますか？" } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

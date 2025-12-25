@@ -1,0 +1,10 @@
+<h1><%= @schedule.title %></h1>
+
+<p>開始日: <%= @schedule.start_date %></p>
+<p>終了日: <%= @schedule.end_date %></p>
+<p>終日: <%= @schedule.all_day ? "はい" : "いいえ" %></p>
+<p>メモ: <%= simple_format(@schedule.memo) %></p>
+
+<%= link_to "編集", edit_schedule_path(@schedule) %> |
+<%= link_to "戻る", schedules_path %> |
+<%= link_to "削除", @schedule, method: :delete, data: { confirm: "削除しますか？" } %>

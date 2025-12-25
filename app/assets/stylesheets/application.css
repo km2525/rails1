@@ -1,0 +1,231 @@
+@import "https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css";
+
+/*
+ *= require_tree .
+ *= require_self
+ */
+
+.flatpickr-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 8px;
+  border-top: 1px solid #ddd;
+}
+
+.fp-ok {
+  background: #1a73e8;
+  color: #fff;
+  border: none;
+  padding: 4px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.fp-cancel {
+  background: #e0e0e0;
+  border: none;
+  padding: 4px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* カード */
+.form-card {
+  background: #fff;
+  padding: 32px;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 24px auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+
+/* 共通 */
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.required::after {
+  content: " *";
+  color: #ef4444;
+}
+
+/* 入力 */
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* 日付横並び */
+.form-row {
+  display: flex;
+  gap: 24px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+/* チェック */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ボタン */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.btn {
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #3b5bfd;
+  color: #fff;
+}
+
+.btn-secondary {
+  background: #fff;
+  border: 1px solid #d1d5db;
+  color: #111827;
+}
+
+/* ===== 予定一覧 ===== */
+.schedule-list {
+  max-width: 900px;
+  margin: 24px auto;
+}
+
+.schedule-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.schedule-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.schedule-date {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.schedule-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.schedule-actions a {
+  flex: 1;
+  text-align: center;
+  padding: 8px 0;
+  margin: 0 4px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* ===== 一覧ヘッダー ===== */
+.page-header {
+  max-width: 1100px;
+  margin: 24px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* 新規追加ボタン */
+.btn-add {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #3b5bfd;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-add-icon {
+  font-size: 18px;
+}
+
+/* ===== テーブルカード ===== */
+.table-card {
+  max-width: 1100px;
+  margin: 0 auto 40px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+
+/* テーブル */
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.schedule-table th {
+  background: #f9fafb;
+  text-align: left;
+  padding: 14px 16px;
+  font-weight: 600;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.schedule-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  vertical-align: middle;
+}
+
+/* 操作リンク */
+.schedule-table .actions {
+  white-space: nowrap;
+}
+
+.schedule-table .actions a {
+  margin-right: 12px;
+  text-decoration: none;
+  color: #2563eb;
+  font-weight: 500;
+}
+
+.schedule-table .actions a:last-child {
+  margin-right: 0;
+}
